@@ -1,0 +1,35 @@
+import groovy.time.TimeCategory
+
+def testResult = { name, desc, result ->
+    if (!desc.parent) { // will match the outermost suite
+        def startItem = '|  ', endItem = '  |'
+
+        def duration = TimeCategory.minus new Date(result.endTime), new Date(result.startTime)
+        def output = "${name} Test Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, " +
+            "${result.failedTestCount} failures, ${result.skippedTestCount} skipped); Completed in: ${duration}"
+        def repeatLength = startItem.length() + output.length() + endItem.length()
+
+        println "\n${'-' * repeatLength}\n${startItem}${output}${endItem}\n${'-' * repeatLength}"
+    }
+}
+
+ext {
+    setupCommonPropetiesForTest = { context, name ->
+        context.with {
+            systemProperties = System.properties
+            systemProperties['user.dir'] = workingDir
+
+            testLogging.showStandardStreams = project.hasProperty('consoleTraceTests')
+
+            beforeTest { descriptor ->
+                logger.lifecycle("Running ${name.toLowerCase()} test: [${descriptor.className}] -> ${descriptor.name}()")
+            }
+
+            afterTest { descriptor, result ->
+                logger.lifecycle("${name} test ${result.resultType}: [${descriptor.className}] -> ${descriptor.name}()")
+            }
+
+            afterSuite testResult.curry(name)
+        }
+    }
+}

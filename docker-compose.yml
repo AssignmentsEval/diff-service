@@ -1,0 +1,14 @@
+version: "3"
+services:
+  dockermongodb:
+    image: mongo:latest
+    container_name: "dockermongodb"
+    ports:
+      - 27017:27017
+  diff-service:
+    image: diff-service
+    container_name: "diff-service"
+    ports:
+      - 7080:7080
+    links:
+      - dockermongodb
