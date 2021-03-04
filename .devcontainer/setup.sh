@@ -15,6 +15,7 @@ apt-get install -y \
   ca-certificates \
   groff \
   less \
+  docker \
   openjdk-8-jdk
 
 
@@ -45,7 +46,5 @@ sed -i -e "s/\/root\/.oh-my-zsh/\/home\/$USERNAME\/.oh-my-zsh/g" /home/$USERNAME
 chown -R $USER_UID:$USER_GID /home/$USERNAME/.oh-my-zsh /home/$USERNAME/.zshrc
 
 echo "Installing oh-my-zsh - DONE"
-
-
 
 echo ">>>> >>>> >>>> >>>> EXITING SETUP.SH <<<< <<<< <<<< <<<< "
