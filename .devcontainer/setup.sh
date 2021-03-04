@@ -18,7 +18,6 @@ apt-get install -y \
   ca-certificates \
   groff \
   less \
-  docker.io \
   openjdk-8-jdk
 
 
