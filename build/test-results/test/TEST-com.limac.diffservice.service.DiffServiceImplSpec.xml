@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.limac.diffservice.service.DiffServiceImplSpec" tests="20" skipped="0" failures="0" errors="0" timestamp="2021-03-06T10:53:39" hostname="codespaces_dcaf8a" time="0.146">
+  <properties/>
+  <testcase name="non existing diffId should be saved in the repository" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.021"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: null, rightInput: existingRightInput] accordingly with the input type LEFT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.004"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: existingRightInput] accordingly with the input type LEFT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: null, rightInput: existingRightInput] accordingly with the input type LEFT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: existingRightInput] accordingly with the input type LEFT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: null, rightInput: null] accordingly with the input type LEFT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.001"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: null] accordingly with the input type LEFT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: newRightInput] accordingly with the input type RIGHT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: null] accordingly with the input type RIGHT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.003"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: null, rightInput: newRightInput] accordingly with the input type RIGHT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: null, rightInput: null] accordingly with the input type RIGHT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.001"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: newRightInput] accordingly with the input type RIGHT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: null] accordingly with the input type RIGHT" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.001"/>
+  <testcase name="findById should return the Diff if the diffId is found" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.004"/>
+  <testcase name="findById should throw NotFoundException if the diffId does not exists" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="diff should be able define the result EQUAL " classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.019"/>
+  <testcase name="diff should be able define the result DIFFERENT_SIZE " classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="diff should be able define the result SAME_SIZE_BUT_DIFFERENT " classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.002"/>
+  <testcase name="diff should compare the left and right inputs and return the diff results" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.013"/>
+  <testcase name="diff should throw MissingInputException if any input is missing" classname="com.limac.diffservice.service.DiffServiceImplSpec" time="0.014"/>
+  <system-out><![CDATA[10:53:39.925 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before spec: com.limac.diffservice.service.DiffServiceImplSpec
+10:53:39.925 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: non existing diffId should be saved in the repository
+10:53:39.938 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: non existing diffId should be saved in the repository
+10:53:39.944 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Adding Diff diffId=newDiffId
+10:53:39.945 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: non existing diffId should be saved in the repository
+10:53:39.946 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: non existing diffId should be saved in the repository
+10:53:39.946 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: if the diffId already exists the Diff input should be updated accordingly with the input type
+10:53:39.961 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: existingRightInput] accordingly with the input type LEFT
+10:53:39.965 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.965 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: existingRightInput] accordingly with the input type LEFT
+10:53:39.966 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: existingRightInput] accordingly with the input type LEFT
+10:53:39.967 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.967 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: existingRightInput] accordingly with the input type LEFT
+10:53:39.968 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: existingRightInput] accordingly with the input type LEFT
+10:53:39.969 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.969 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: existingRightInput] accordingly with the input type LEFT
+10:53:39.970 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: existingRightInput] accordingly with the input type LEFT
+10:53:39.971 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.971 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: existingRightInput] accordingly with the input type LEFT
+10:53:39.973 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: null] accordingly with the input type LEFT
+10:53:39.973 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.974 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: null] accordingly with the input type LEFT
+10:53:39.975 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: null] accordingly with the input type LEFT
+10:53:39.976 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.976 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: newLeftInput, rightInput: null] accordingly with the input type LEFT
+10:53:39.977 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: newRightInput] accordingly with the input type RIGHT
+10:53:39.979 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.979 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: newRightInput] accordingly with the input type RIGHT
+10:53:39.980 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: null] accordingly with the input type RIGHT
+10:53:39.982 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.982 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: null] accordingly with the input type RIGHT
+10:53:39.984 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: newRightInput] accordingly with the input type RIGHT
+10:53:39.985 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.985 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: newRightInput] accordingly with the input type RIGHT
+10:53:39.986 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: null] accordingly with the input type RIGHT
+10:53:39.987 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.988 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: null, rightInput: null] accordingly with the input type RIGHT
+10:53:39.989 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: newRightInput] accordingly with the input type RIGHT
+10:53:39.990 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.990 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: newRightInput] accordingly with the input type RIGHT
+10:53:39.991 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: null] accordingly with the input type RIGHT
+10:53:39.992 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Updating Diff diffId=existingDiffId
+10:53:39.993 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: if the diffId already exists the Diff updated should be [leftInput: existingLeftInput, rightInput: null] accordingly with the input type RIGHT
+10:53:39.994 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: if the diffId already exists the Diff input should be updated accordingly with the input type
+10:53:39.994 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: findById should return the Diff if the diffId is found
+10:53:39.995 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: findById should return the Diff if the diffId is found
+10:53:39.997 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: findById should return the Diff if the diffId is found
+10:53:39.998 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: findById should return the Diff if the diffId is found
+10:53:39.998 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: findById should throw NotFoundException if the diffId does not exists
+10:53:40.000 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: findById should throw NotFoundException if the diffId does not exists
+10:53:40.001 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: findById should throw NotFoundException if the diffId does not exists
+10:53:40.001 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: findById should throw NotFoundException if the diffId does not exists
+10:53:40.002 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: diff should compare the left and right inputs and return the result type
+10:53:40.004 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should be able define the result EQUAL 
+10:53:40.005 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.022 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Diff executed: diffId=diffId, left=eyJwcm9wZXJ0eSI6InZhbHVlIn0=, right=eyJwcm9wZXJ0eSI6InZhbHVlIn0=, resultType=EQUAL, diffResults=null
+10:53:40.023 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should be able define the result EQUAL 
+10:53:40.024 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should be able define the result DIFFERENT_SIZE 
+10:53:40.026 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.026 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Diff executed: diffId=diffId, left=eyJwcm9wZXJ0eSI6InZhbHVlIn0=, right=eyJhbm90aGVyUHJvcGVydHkiOiJhbm90aGVyVmFsdWUifQ==, resultType=DIFFERENT_SIZE, diffResults=null
+10:53:40.026 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should be able define the result DIFFERENT_SIZE 
+10:53:40.040 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should be able define the result SAME_SIZE_BUT_DIFFERENT 
+10:53:40.041 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.042 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Diff executed: diffId=diffId, left=eyJzYW1lU2l6ZSI6InZhbHVlIn0=, right=eyJwcm9wZXJ0eSI6InZhbHVlIn0=, resultType=SAME_SIZE_BUT_DIFFERENT, diffResults=[DiffResultDto(offset=3, length=10)]
+10:53:40.042 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should be able define the result SAME_SIZE_BUT_DIFFERENT 
+10:53:40.043 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: diff should compare the left and right inputs and return the result type
+10:53:40.043 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: diff should compare the left and right inputs and return the diff results
+10:53:40.054 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should compare the left and right inputs and return the diff results
+10:53:40.055 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.055 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Diff executed: diffId=diffId, left=eyJzYW1lU2l6ZSI6InZhbHVlIn0=, right=eyJwcm9wZXJ0eSI6ImZhbHNlIn0=, resultType=SAME_SIZE_BUT_DIFFERENT, diffResults=[DiffResultDto(offset=3, length=10), DiffResultDto(offset=17, length=1), DiffResultDto(offset=22, length=1)]
+10:53:40.056 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should compare the left and right inputs and return the diff results
+10:53:40.056 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: diff should compare the left and right inputs and return the diff results
+10:53:40.057 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: diff should throw MissingInputException if any input is missing
+10:53:40.058 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should throw MissingInputException if any input is missing
+10:53:40.059 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.059 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should throw MissingInputException if any input is missing
+10:53:40.060 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should throw MissingInputException if any input is missing
+10:53:40.060 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.061 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should throw MissingInputException if any input is missing
+10:53:40.062 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should throw MissingInputException if any input is missing
+10:53:40.062 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.063 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should throw MissingInputException if any input is missing
+10:53:40.063 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should throw MissingInputException if any input is missing
+10:53:40.064 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.064 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should throw MissingInputException if any input is missing
+10:53:40.065 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should throw MissingInputException if any input is missing
+10:53:40.065 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.066 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should throw MissingInputException if any input is missing
+10:53:40.066 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should throw MissingInputException if any input is missing
+10:53:40.067 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.067 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should throw MissingInputException if any input is missing
+10:53:40.068 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should throw MissingInputException if any input is missing
+10:53:40.068 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.069 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should throw MissingInputException if any input is missing
+10:53:40.069 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff should throw MissingInputException if any input is missing
+10:53:40.070 [Test worker] INFO com.limac.diffservice.service.DiffServiceImpl - Executing diff for diffId=diffId
+10:53:40.070 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff should throw MissingInputException if any input is missing
+10:53:40.071 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: diff should throw MissingInputException if any input is missing
+10:53:40.071 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After spec: com.limac.diffservice.service.DiffServiceImplSpec
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

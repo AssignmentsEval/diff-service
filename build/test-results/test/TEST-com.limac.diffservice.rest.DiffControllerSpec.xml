@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.limac.diffservice.rest.DiffControllerSpec" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-03-06T10:53:39" hostname="codespaces_dcaf8a" time="0.049">
+  <properties/>
+  <testcase name="saveLeft API should save the left input of a Diff" classname="com.limac.diffservice.rest.DiffControllerSpec" time="0.039"/>
+  <testcase name="saveRight API should save the right input of a Diff" classname="com.limac.diffservice.rest.DiffControllerSpec" time="0.004"/>
+  <testcase name="diff API should call the service to compare the left and right inputs of the given diffId" classname="com.limac.diffservice.rest.DiffControllerSpec" time="0.005"/>
+  <system-out><![CDATA[10:53:39.825 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before spec: com.limac.diffservice.rest.DiffControllerSpec
+10:53:39.825 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: saveLeft API should save the left input of a Diff
+10:53:39.833 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: saveLeft API should save the left input of a Diff
+10:53:39.857 [Test worker] INFO com.limac.diffservice.rest.DiffController - Received left=eyJwcm9wZXJ0eSI6InZhbHVlIn0= for diffId=diffId
+10:53:39.863 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: saveLeft API should save the left input of a Diff
+10:53:39.864 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: saveLeft API should save the left input of a Diff
+10:53:39.865 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: saveRight API should save the right input of a Diff
+10:53:39.865 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: saveRight API should save the right input of a Diff
+10:53:39.868 [Test worker] INFO com.limac.diffservice.rest.DiffController - Received right=eyJwcm9wZXJ0eSI6InZhbHVlIn0= for diffId=diffId
+10:53:39.868 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: saveRight API should save the right input of a Diff
+10:53:39.868 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: saveRight API should save the right input of a Diff
+10:53:39.869 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: diff API should call the service to compare the left and right inputs of the given diffId
+10:53:39.869 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: diff API should call the service to compare the left and right inputs of the given diffId
+10:53:39.873 [Test worker] INFO com.limac.diffservice.rest.DiffController - Comparing diffId=diffId
+10:53:39.874 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: diff API should call the service to compare the left and right inputs of the given diffId
+10:53:39.874 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: diff API should call the service to compare the left and right inputs of the given diffId
+10:53:39.874 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After spec: com.limac.diffservice.rest.DiffControllerSpec
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

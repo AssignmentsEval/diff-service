@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.18">
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/DiffServiceApplication.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/autoconfigure/DiffSecurityConfiguration.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/autoconfigure/SwaggerAutoConfiguration.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/domain/Diff.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/exception/MissingInputException.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/exception/NotFoundException.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/mapping/DiffMapper.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/repository/DiffRepository.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/rest/DiffController.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/rest/dto/Base64Dto.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/rest/dto/DiffDto.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/rest/dto/DiffResultDto.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/rest/dto/ErrorResponseDto.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/rest/exceptionhandler/ControllerExceptionHandler.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/service/DiffService.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/service/DiffServiceImpl.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/type/InputType.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/type/ResultType.java">
+</file>
+<file name="/home/codespace/workspace/lima_caio-diff-service/src/main/java/com/limac/diffservice/validation/annotation/Base64.java">
+</file>
+</checkstyle>

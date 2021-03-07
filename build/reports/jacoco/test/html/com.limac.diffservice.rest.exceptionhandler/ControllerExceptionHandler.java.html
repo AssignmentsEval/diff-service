@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ControllerExceptionHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">diff-service</a> &gt; <a href="index.source.html" class="el_package">com.limac.diffservice.rest.exceptionhandler</a> &gt; <span class="el_source">ControllerExceptionHandler.java</span></div><h1>ControllerExceptionHandler.java</h1><pre class="source lang-java linenums">package com.limac.diffservice.rest.exceptionhandler;
+
+import com.limac.diffservice.exception.MissingInputException;
+import com.limac.diffservice.exception.NotFoundException;
+import com.limac.diffservice.rest.dto.ErrorResponseDto;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+import java.util.StringJoiner;
+
+import static net.logstash.logback.argument.StructuredArguments.kv;
+import static org.springframework.http.HttpStatus.*;
+
+/**
+ * Controller Exception Handler to map exceptions to {@link ErrorResponseDto}.
+ */
+<span class="fc" id="L23">@Slf4j</span>
+@ControllerAdvice
+<span class="fc" id="L25">public class ControllerExceptionHandler {</span>
+    /**
+     * Handles {@link MethodArgumentNotValidException} to send it as an {@link ErrorResponseDto} with status 400.
+     *
+     * @param exception exception to be handled.
+     * @return Response entity containing error response.
+     */
+    @ResponseStatus(BAD_REQUEST)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity&lt;ErrorResponseDto&gt; handleBadRequest(MethodArgumentNotValidException exception) {
+<span class="fc" id="L35">        final StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);</span>
+
+<span class="fc" id="L37">        exception.getBindingResult().getFieldErrors().forEach(fieldError -&gt;</span>
+<span class="fc" id="L38">            stringJoiner.add(fieldError.getField() + &quot; &quot; + fieldError.getDefaultMessage()));</span>
+
+<span class="fc" id="L40">        final String errorMessage = stringJoiner.toString();</span>
+
+<span class="fc" id="L42">        log.error(&quot;{} was caught with {}&quot;, kv(&quot;exception&quot;, exception.getClass().getSimpleName()), kv(&quot;errorMessage&quot;, errorMessage));</span>
+
+<span class="fc" id="L44">        return ResponseEntity</span>
+<span class="fc" id="L45">            .status(BAD_REQUEST)</span>
+<span class="fc" id="L46">            .body(ErrorResponseDto.builder().errorMessage(errorMessage).build());</span>
+    }
+
+
+    /**
+     * Handles {@link NotFoundException} to send it as an {@link ErrorResponseDto} with status 404.
+     *
+     * @param exception exception to be handled.
+     * @return Response entity containing error response.
+     */
+    @ResponseStatus(NOT_FOUND)
+    @ExceptionHandler(NotFoundException.class)
+    public ResponseEntity&lt;ErrorResponseDto&gt; handleNotFound(Exception exception) {
+<span class="fc" id="L59">        return buildResponseEntity(exception, NOT_FOUND);</span>
+    }
+
+    /**
+     * Handles {@link HttpMediaTypeNotSupportedException} to send it as an {@link ErrorResponseDto} with status 415.
+     *
+     * @param exception exception to be handled.
+     * @return Response entity containing error response.
+     */
+    @ResponseStatus(UNSUPPORTED_MEDIA_TYPE)
+    @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
+    public ResponseEntity&lt;ErrorResponseDto&gt; handleUnsupportedMediaType(Exception exception) {
+<span class="fc" id="L71">        return buildResponseEntity(exception, UNSUPPORTED_MEDIA_TYPE);</span>
+    }
+
+    /**
+     * Handles {@link MissingInputException} to send it as an {@link ErrorResponseDto} with status 500.
+     * This handler is also used as fallback for any unexpected {@link Exception}.
+     *
+     * @param exception exception to be handled.
+     * @return Response entity containing error response.
+     */
+    @ResponseStatus(INTERNAL_SERVER_ERROR)
+    @ExceptionHandler({ Exception.class, MissingInputException.class })
+    public ResponseEntity&lt;ErrorResponseDto&gt; handleInternalServerError(Exception exception) {
+<span class="fc" id="L84">        return buildResponseEntity(exception, INTERNAL_SERVER_ERROR);</span>
+    }
+
+    private ResponseEntity&lt;ErrorResponseDto&gt; buildResponseEntity(Exception exception, HttpStatus httpStatus) {
+<span class="fc" id="L88">        final String errorMessage = exception.getMessage();</span>
+
+<span class="fc" id="L90">        log.error(&quot;{} was caught with {}&quot;, kv(&quot;exception&quot;, exception.getClass().getSimpleName()), kv(&quot;errorMessage&quot;, errorMessage));</span>
+
+<span class="fc" id="L92">        return ResponseEntity</span>
+<span class="fc" id="L93">            .status(httpStatus)</span>
+<span class="fc" id="L94">            .body(ErrorResponseDto.builder().errorMessage(errorMessage).build());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.limac.diffservice.mapping.DiffMapperImplSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-03-06T10:53:40" hostname="codespaces_dcaf8a" time="0.034">
+  <properties/>
+  <testcase name="Base64Dto mapping to left input of Diff" classname="com.limac.diffservice.mapping.DiffMapperImplSpec" time="0.014"/>
+  <testcase name="null mapping to left input of Diff" classname="com.limac.diffservice.mapping.DiffMapperImplSpec" time="0.004"/>
+  <testcase name="Base64Dto mapping to right input of Diff" classname="com.limac.diffservice.mapping.DiffMapperImplSpec" time="0.005"/>
+  <testcase name="null mapping to right input of Diff" classname="com.limac.diffservice.mapping.DiffMapperImplSpec" time="0.003"/>
+  <testcase name="Diff mapping to DiffDto" classname="com.limac.diffservice.mapping.DiffMapperImplSpec" time="0.002"/>
+  <testcase name="null mapping to DiffDto" classname="com.limac.diffservice.mapping.DiffMapperImplSpec" time="0.002"/>
+  <system-out><![CDATA[10:53:40.259 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before spec: com.limac.diffservice.mapping.DiffMapperImplSpec
+10:53:40.260 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: Base64Dto mapping to left input of Diff
+10:53:40.270 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: Base64Dto mapping to left input of Diff
+10:53:40.273 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: Base64Dto mapping to left input of Diff
+10:53:40.273 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: Base64Dto mapping to left input of Diff
+10:53:40.274 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: null mapping to left input of Diff
+10:53:40.276 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: null mapping to left input of Diff
+10:53:40.278 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: null mapping to left input of Diff
+10:53:40.279 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: null mapping to left input of Diff
+10:53:40.280 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: Base64Dto mapping to right input of Diff
+10:53:40.281 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: Base64Dto mapping to right input of Diff
+10:53:40.284 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: Base64Dto mapping to right input of Diff
+10:53:40.285 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: Base64Dto mapping to right input of Diff
+10:53:40.286 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: null mapping to right input of Diff
+10:53:40.287 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: null mapping to right input of Diff
+10:53:40.289 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: null mapping to right input of Diff
+10:53:40.289 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: null mapping to right input of Diff
+10:53:40.289 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: Diff mapping to DiffDto
+10:53:40.290 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: Diff mapping to DiffDto
+10:53:40.291 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: Diff mapping to DiffDto
+10:53:40.291 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: Diff mapping to DiffDto
+10:53:40.292 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before feature: null mapping to DiffDto
+10:53:40.293 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - Before iteration: null mapping to DiffDto
+10:53:40.293 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After iteration: null mapping to DiffDto
+10:53:40.294 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After feature: null mapping to DiffDto
+10:53:40.296 [Test worker] DEBUG com.athaydes.spockframework.report.SpecInfoListener - After spec: com.limac.diffservice.mapping.DiffMapperImplSpec
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
